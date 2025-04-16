@@ -40,6 +40,7 @@ function renderAdvice(advice) {
 
 async function getAdvice() {
     const url = `https://api.adviceslip.com/advice`; // URL corect fără timestamp
+    const adNumb = Math.floor(Math.random() * 1000) + 1;
     let advice = 'Not downloaded advice';
     try {
         const response = await fetch(url, { cache: "no-store" }); // Nu permite cache-ul
